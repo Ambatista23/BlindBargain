@@ -1,0 +1,28 @@
+.list-group-item {
+  line-height: 2.5;
+}
+
+.list-group-item {
+  background-color: black;
+  border-top-color: rgb(43, 255, 0);
+  width: 375px;
+  border-radius: 80px;
+}
+
+h3 {
+  margin-left: 6px;
+  color: rgb(0, 255, 123);
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  padding-right: 150px;
+}
+
+.jumbotron {
+  background-color: rgb(35, 20, 150);
+}
+
+ {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 45px;
+
+}
