@@ -1,3 +1,19 @@
 .jumbotron {
-    background-color: aquamarine;
+    background-color:  rgba(53, 49, 79, 0.748);
+    background-image: url("https://cdn.dribbble.com/users/5976/screenshots/3969696/bb-double-b-monogram-letter-mark-logo-design-symbol-by-alex-tass.png");
+    background-repeat: no-repeat;
+    /* background-image: url("../../Jumbotron/style.css/double B.png") */
 }
+h1{
+    font-size: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    text-shadow: 2px 2px 4px #7f9bf0;
+}
+
+h2{
+    font-size:30px;
+    color: white;
+    text-shadow: 2px 2px 4px #7f9bf0;
+}
+
