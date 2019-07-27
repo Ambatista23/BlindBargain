@@ -2,6 +2,7 @@
     background-color:  rgba(53, 49, 79, 0.748);
     background-image: url("https://cdn.dribbble.com/users/5976/screenshots/3969696/bb-double-b-monogram-letter-mark-logo-design-symbol-by-alex-tass.png");
     background-repeat: no-repeat;
+    /* background-size: 00px; */
     /* background-image: url("../../Jumbotron/style.css/double B.png") */
 }
 h1{
@@ -16,4 +17,6 @@ h2{
     color: white;
     text-shadow: 2px 2px 4px #7f9bf0;
 }
-
+/* Image{
+    background-image: url("blindbargin/src/components/Jumbotron/double B.png");
+} */
