@@ -4,7 +4,8 @@
   "description": "A bartering app.",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "install": "cd blindbargin && npm install",
+    "start": "concurrently \"node server.js\" \"cd blindbargin && npm start\"",
     "fix": "eslint --fix .",
     "test": "npm run lint && cross-env NODE_ENV=test mocha -u tdd --reporter spec --exit"
   },
@@ -13,6 +14,7 @@
     "@material-ui/core": "^4.2.1",
     "@material-ui/icons": "^4.2.1",
     "bulma": "^0.7.5",
+    "concurrently": "^4.1.1",
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
