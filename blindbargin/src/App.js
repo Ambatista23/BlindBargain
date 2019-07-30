@@ -6,6 +6,7 @@ import MenuItem from "../../blindbargin/src/components/Demo";
 import Demo from "../../blindbargin/src/components/Demo";
 import './App.css';
 import PrimarySearchAppBar from '../../blindbargin/src/components/Demo';
+import Fragment from '../../blindbargin/src/components/Dialog/CreateItem';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         <Menu>
           <MenuItem />
           </Menu> />
+          <Fragment />
           </Demo>
         
         

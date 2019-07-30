@@ -1,6 +1,6 @@
 
 import "./style.css";
- 
+import CreateItem from "../Dialog/CreateItem";
 import React from 'react';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -17,6 +17,10 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import Icon from '@material-ui/core/Icon';
+import clsx from 'clsx';
+import  { red }  from '@material-ui/core/colors';
+import Dialog from '@material-ui/core/Dialog';
 
 const useStyles = makeStyles(theme => ({
   grow: {
@@ -78,6 +82,20 @@ const useStyles = makeStyles(theme => ({
       display: 'none',
     },
   },
+  root: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'flex-end',
+  },
+  icon: {
+    margin: theme.spacing(2),
+  },
+  iconHover: {
+    margin: theme.spacing(2),
+    '&:hover': {
+      color: red[800],
+    },
+  },
 }));
 
 export default function PrimarySearchAppBar() {
@@ -133,6 +151,8 @@ export default function PrimarySearchAppBar() {
       onClose={handleMobileMenuClose}
     >
       <MenuItem>
+        
+       
         <IconButton aria-label="show 4 new mails" color="inherit">
           <Badge badgeContent={4} color="secondary">
             <MailIcon />
@@ -192,6 +212,9 @@ export default function PrimarySearchAppBar() {
           </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
+          <CreateItem/>
+
+          <Dialog />
             <IconButton aria-label="show 4 new mails" color="inherit">
               <Badge badgeContent={4} color="secondary">
                 <MailIcon />
