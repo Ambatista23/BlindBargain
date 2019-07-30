@@ -17,8 +17,6 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
-import Icon from '@material-ui/core/Icon';
-import clsx from 'clsx';
 import  { red }  from '@material-ui/core/colors';
 import Dialog from '@material-ui/core/Dialog';
 
