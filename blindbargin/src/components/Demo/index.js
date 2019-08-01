@@ -1,6 +1,7 @@
 
 import "./style.css";
 import CreateItem from "../Dialog/CreateItem";
+import CreateUser from "../Dialog/CreateUser";
 import React from 'react';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -132,8 +133,8 @@ export default function PrimarySearchAppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      <MenuItem onClick={handleProfileMenuOpen}>Profile</MenuItem>
+      <MenuItem onClick={handleMobileMenuOpen}>My account</MenuItem>
     </Menu>
   );
 
@@ -211,6 +212,7 @@ export default function PrimarySearchAppBar() {
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
           <CreateItem/>
+          <CreateUser/>
 
           <Dialog />
             <IconButton aria-label="show 4 new mails" color="inherit">
