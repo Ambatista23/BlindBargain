@@ -86,7 +86,12 @@ export default function FormDialog() {
 
   function handleClose() {
     setOpen(false);
+    
+   
+    //Grab value and put into state.
   }
+
+ 
 
   return (
     <div className={classes.root}>
@@ -105,7 +110,7 @@ export default function FormDialog() {
         label="product_name"
         className={classes.textField}
         value={values.name}
-        onChange={handleChange('proudcut_name')}
+        onChange={handleChange('product_name')}
         margin="normal"
         variant="outlined"
        />
