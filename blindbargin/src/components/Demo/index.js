@@ -1,6 +1,7 @@
 
 import "./style.css";
 import CreateItem from "../Dialog/CreateItem";
+import CreateUser from "../Dialog/CreateUser";
 import React from 'react';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -16,9 +17,9 @@ import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-import MoreIcon from '@material-ui/icons/MoreVert';
+// import MoreIcon from '@material-ui/icons/MoreVert';
 import  { red }  from '@material-ui/core/colors';
-import Dialog from '@material-ui/core/Dialog';
+// import Dialog from '@material-ui/core/Dialog';
 
 const useStyles = makeStyles(theme => ({
   grow: {
@@ -132,8 +133,8 @@ export default function PrimarySearchAppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      <MenuItem onClick={handleProfileMenuOpen}>Profile</MenuItem>
+      <MenuItem onClick={handleMobileMenuOpen}>My account</MenuItem>
     </Menu>
   );
 
@@ -192,8 +193,8 @@ export default function PrimarySearchAppBar() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography className={classes.title} variant="h4" noWrap>
-            <h3>Your price, your way.</h3>
+          <Typography className={classes.title} variant="h2" noWrap>
+            <h2>Your price, your way.</h2>
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
@@ -211,8 +212,9 @@ export default function PrimarySearchAppBar() {
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
           <CreateItem/>
+          <CreateUser/>
 
-          <Dialog />
+          {/* <Dialog /> */}
             <IconButton aria-label="show 4 new mails" color="inherit">
               <Badge badgeContent={4} color="secondary">
                 <MailIcon />
@@ -223,7 +225,7 @@ export default function PrimarySearchAppBar() {
                 <NotificationsIcon />
               </Badge>
             </IconButton>
-            <IconButton
+            {/* <IconButton
               edge="end"
               aria-label="account of current user"
               aria-controls={menuId}
@@ -243,7 +245,7 @@ export default function PrimarySearchAppBar() {
               color="inherit"
             >
               <MoreIcon />
-            </IconButton> 
+            </IconButton>  */}
           </div>
         </Toolbar>
       </AppBar>
