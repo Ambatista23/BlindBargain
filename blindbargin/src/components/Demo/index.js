@@ -193,8 +193,10 @@ export default function PrimarySearchAppBar() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography className={classes.title} variant="h2" noWrap>
-            <h2>Your price, your way.</h2>
+
+          <Typography className={classes.title} variant="h3" noWrap>
+            Your price, your way.
+
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
