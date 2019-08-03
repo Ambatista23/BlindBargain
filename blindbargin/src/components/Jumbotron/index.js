@@ -5,7 +5,7 @@ import "./style.css";
 function Jumbotron({ children }) {
   return (
     <div
-      style={{ height: 220, clear: "both", paddingTop: 80, textAlign: "center" }}
+      style={{ height: "auto", clear: "both", paddingTop: 80, textAlign: "center" }}
       className="jumbotron">
         {/* <Image src={"blindbargin/src/components/Jumbotron/double B.png"} width={500} height={300} mode='fit' />   */}
         <h1>Welcome to Blind Bargin!</h1>

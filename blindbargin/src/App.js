@@ -5,8 +5,10 @@ import Menu from "../../blindbargin/src/components/Demo";
 import MenuItem from "../../blindbargin/src/components/Demo";
 import Demo from "../../blindbargin/src/components/Demo";
 import './App.css';
-import PrimarySearchAppBar from '../../blindbargin/src/components/Demo';
+import MediaCard from "../../blindbargin/src/components/Card/Card";
+
 import Fragment from '../../blindbargin/src/components/Dialog/CreateItem';
+import SimpleContainer from '../../blindbargin/src/components/WebContent';
 
 function App() {
 
@@ -14,15 +16,15 @@ function App() {
     <Router>
       <div>
         <Demo>
-          {PrimarySearchAppBar}
-        <Menu>
+          <Menu>
           <MenuItem />
           </Menu> />
           <Fragment />
-          </Demo>
-        
-        
+        </Demo>
         <Jumbotron />
+        <SimpleContainer>
+        <MediaCard></MediaCard>
+        </SimpleContainer>
       </div>
     </Router>
  );

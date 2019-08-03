@@ -1,39 +1,39 @@
-import React from "react";
-import Button from "@material-ui/core/Button";
-import TextField from "@material-ui/core/TextField";
-import Dialog from "@material-ui/core/Dialog";
-import DialogActions from "@material-ui/core/DialogActions";
-import DialogContent from "@material-ui/core/DialogContent";
-import DialogContentText from "@material-ui/core/DialogContentText";
-import DialogTitle from "@material-ui/core/DialogTitle";
-import Fab from "@material-ui/core/Fab";
-import AddIcon from "@material-ui/icons/Add";
-import { makeStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
-import Grid from "@material-ui/core/Grid";
-import clsx from "clsx";
-import MenuItem from "@material-ui/core/MenuItem";
-import { FormControl } from "@material-ui/core";
+
+import React from 'react';
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import Fab from '@material-ui/core/Fab';
+import AddIcon from '@material-ui/icons/Add';
+import { makeStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
 import API from "../../utils/API";
 
-const currencies = [
-  {
-    value: "USD",
-    label: "$"
-  },
-  {
-    value: "EUR",
-    label: "€"
-  },
-  {
-    value: "BTC",
-    label: "฿"
-  },
-  {
-    value: "JPY",
-    label: "¥"
-  }
-];
+import { FormControl } from '@material-ui/core';
+
+
+// const currencies = [
+//   {
+//     value: 'USD',
+//     label: '$',
+//   },
+//   {
+//     value: 'EUR',
+//     label: '€',
+//   },
+//   {
+//     value: 'BTC',
+//     label: '฿',
+//   },
+//   {
+//     value: 'JPY',
+//     label: '¥',
+//   },
+// ];
 
 const useStyles = makeStyles(theme => ({
   fab: {
@@ -89,7 +89,11 @@ export default function FormDialog() {
 
   function handleClose() {
     setOpen(false);
+    
+   
+    //Grab value and put into state.
   }
+
 
   // function handleValidation(name, value) {
   //   switch(name){
