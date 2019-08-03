@@ -18,6 +18,7 @@ module.exports = function(app) {
   });
       //working on gettin new users..
    app.post("/api/users", function(req, res){
+    //  create new itemData object that includes req.user.id
      db.Users.create(req.body).then(function(dbUsers){
        res.json(dbUsers);
      })

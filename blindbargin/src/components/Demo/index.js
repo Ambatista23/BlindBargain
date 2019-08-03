@@ -192,8 +192,8 @@ export default function PrimarySearchAppBar() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography className={classes.title} variant="h4" noWrap>
-            <h3>Your price, your way.</h3>
+          <Typography className={classes.title} variant="h3" noWrap>
+            Your price, your way.
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
@@ -212,7 +212,7 @@ export default function PrimarySearchAppBar() {
           <div className={classes.sectionDesktop}>
           <CreateItem/>
 
-          <Dialog />
+          {/* <Dialog /> */}
             <IconButton aria-label="show 4 new mails" color="inherit">
               <Badge badgeContent={4} color="secondary">
                 <MailIcon />
