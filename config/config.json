@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "$ABati0602",
-    "database": "BlindBargain",
+    "password": "Altima1987",
+    "database": "friendlyNeighbor",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

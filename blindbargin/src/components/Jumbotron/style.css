@@ -1,7 +1,8 @@
 .jumbotron {
-    background-color:  rgba(53, 49, 79, 0.748);
-    background-image: url("https://cdn.dribbble.com/users/5976/screenshots/3969696/bb-double-b-monogram-letter-mark-logo-design-symbol-by-alex-tass.png");
+    background-color:  rgba(31, 31, 35, 0.993);
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcy7iRaLAA5c749M4pUu07qMBM6f1xTB7D1ExUD6H_k7Bg2hNm");
     background-repeat: no-repeat;
+    
     /* background-size: 00px; */
     /* background-image: url("../../Jumbotron/style.css/double B.png") */
 }
