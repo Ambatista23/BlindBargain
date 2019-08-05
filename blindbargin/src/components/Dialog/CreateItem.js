@@ -12,6 +12,7 @@ import AddIcon from '@material-ui/icons/Add';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import API from "../../utils/API";
+import {validate} from "../Validation/postItemValidation";
 
 import { FormControl } from '@material-ui/core';
 
@@ -78,9 +79,10 @@ export default function FormDialog() {
 
   const handleChange = name => event => {
     // let valid = handleValidation(name, event.target.value);
-
+    
     // pop up notifcation if validation error
     setValues({ ...values, [name]: event.target.value });
+
   };
 
   function handleClickOpen() {
@@ -96,15 +98,17 @@ export default function FormDialog() {
 
 
   // function handleValidation(name, value) {
-  //   switch(name){
-  //     case "product_name": 
-  //     if(value.trim() === "")  
+  //   // switch(name){
+  //   //   case "product_name": 
+  //     if(value.trim() === "") {
+        
+  //     }  
   //   }
-  // }
+  
 
   function handleSubmit() {
     // include validation checking before posting item
-
+    validate(values);
     API.postItem(values);
   }
 

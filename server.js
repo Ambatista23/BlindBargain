@@ -1,16 +1,19 @@
 
-var express = require("express");
-var exphbs = require("express-handlebars");
-
-var db = require("./models");
-
-var app = express();
-var PORT = process.env.PORT || 3001;
+const express = require("express");
+const exphbs = require("express-handlebars");
+const db = require("./models");
+const app = express();
+const PORT = process.env.PORT || 3001;
+const passport = require('./passport/index')
+const userRoute = require('./routes/apiRoutes')
 
 // Middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("public"));
+app.use('/authenticate', userRoute);
+app.use(passport.initialize());
+// app.use(passport.session());
 
 // Handlebars
 app.engine(
@@ -27,7 +30,7 @@ app.set("view engine", "handlebars");
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
-var syncOptions = { force: false };
+const syncOptions = { force: false };
 
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`

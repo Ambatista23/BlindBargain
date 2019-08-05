@@ -6,19 +6,30 @@ import MenuItem from "../../blindbargin/src/components/Demo";
 import Demo from "../../blindbargin/src/components/Demo";
 import './App.css';
 import MediaCard from "../../blindbargin/src/components/Card/Card";
-
 import Fragment from '../../blindbargin/src/components/Dialog/CreateItem';
 import SimpleContainer from '../../blindbargin/src/components/WebContent';
+import Login from './components/Users/Login';
+import Signup from './components/Users/Signup';
+import Profile from './components/Users/Profile';
+import Dashboard from './components/Users/Dashboard';
+import Errorpage from './components/Users/Errorpage';
 
 function App() {
 
   return (
     <Router>
+      <Switch>
+        <Route  exact path="/" component={Dashboard}/>
+        <Route path="/profile" component={Profile}/>
+        <Route path="/signup" component={Signup}/>
+        <Route path="/login" component={Login}/>
+        <Route path="/*" component={Errorpage}/>
+      </Switch>
       <div>
         <Demo>
           <Menu>
           <MenuItem />
-          </Menu> />
+          </Menu>
           <Fragment />
         </Demo>
         <Jumbotron />

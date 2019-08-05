@@ -6,7 +6,7 @@
 var Sequelize = require("sequelize");
 
 // Set up our connection information
-var sequelize = new Sequelize("friendlyNeighbor", "root", "$ABati0602", {
+var sequelize = new Sequelize("BlindBargain", "root", "$ABati0602", {
   host: "localhost",
   port: 3306,
   dialect: "mysql"

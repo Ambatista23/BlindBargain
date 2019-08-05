@@ -7,10 +7,8 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Fab from '@material-ui/core/Fab';
-
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-
 import { FormControl } from '@material-ui/core';
 
 
@@ -50,10 +48,10 @@ export default function FormDialog() {
   const [open, setOpen] = React.useState(false);
   const classes = useStyles();
   const [values, setValues] = React.useState({
-    product_name: '',
-    description: '',
-    category: 'Controlled',
-    price: 'USD',
+    first_name: '',
+    last_name: '',
+    username: '',
+    passcode: '',
   });
 
   const handleChange = name => event => {
@@ -137,7 +135,7 @@ export default function FormDialog() {
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color="primary" variant="raised">
-           Post
+           Create
           </Button>
         </DialogActions>
       </Dialog>

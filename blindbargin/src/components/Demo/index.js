@@ -9,14 +9,14 @@ import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import InputBase from '@material-ui/core/InputBase';
-import Badge from '@material-ui/core/Badge';
-import MenuItem from '@material-ui/core/MenuItem';
+// import Badge from '@material-ui/core/Badge';
+// import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
-import AccountCircle from '@material-ui/icons/AccountCircle';
-import MailIcon from '@material-ui/icons/Mail';
-import NotificationsIcon from '@material-ui/icons/Notifications';
+// import AccountCircle from '@material-ui/icons/AccountCircle';
+// import MailIcon from '@material-ui/icons/Mail';
+// import NotificationsIcon from '@material-ui/icons/Notifications';
 // import MoreIcon from '@material-ui/icons/MoreVert';
 import  { red }  from '@material-ui/core/colors';
 // import Dialog from '@material-ui/core/Dialog';
@@ -46,7 +46,7 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
     [theme.breakpoints.up('sm')]: {
       marginLeft: theme.spacing(3),
-      width: 'auto',
+      width: '40%',
     },
   },
   searchIcon: {
@@ -105,9 +105,9 @@ export default function PrimarySearchAppBar() {
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
-  function handleProfileMenuOpen(event) {
-    setAnchorEl(event.currentTarget);
-  }
+  // function handleProfileMenuOpen(event) {
+  //   setAnchorEl(event.currentTarget);
+  // }
 
   function handleMobileMenuClose() {
     setMobileMoreAnchorEl(null);
@@ -118,9 +118,9 @@ export default function PrimarySearchAppBar() {
     handleMobileMenuClose();
   }
 
-  function handleMobileMenuOpen(event) {
-    setMobileMoreAnchorEl(event.currentTarget);
-  }
+  // function handleMobileMenuOpen(event) {
+  //   setMobileMoreAnchorEl(event.currentTarget);
+  // }
 
   const menuId = 'primary-search-account-menu';
   const renderMenu = (
@@ -133,8 +133,8 @@ export default function PrimarySearchAppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleProfileMenuOpen}>Profile</MenuItem>
-      <MenuItem onClick={handleMobileMenuOpen}>My account</MenuItem>
+      {/* <MenuItem onClick={handleProfileMenuOpen}>Profile</MenuItem>
+      <MenuItem onClick={handleMobileMenuOpen}>My account</MenuItem> */}
     </Menu>
   );
 
@@ -149,7 +149,7 @@ export default function PrimarySearchAppBar() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <MenuItem>
+      {/* <MenuItem>
         
        
         <IconButton aria-label="show 4 new mails" color="inherit">
@@ -177,7 +177,7 @@ export default function PrimarySearchAppBar() {
           <AccountCircle />
         </IconButton>
         <p>Profile</p>
-      </MenuItem>
+      </MenuItem> */}
     </Menu>
   );
 
@@ -193,11 +193,9 @@ export default function PrimarySearchAppBar() {
           >
             <MenuIcon />
           </IconButton>
-
-          <Typography className={classes.title} variant="h3" noWrap>
-            Your price, your way.
-
-          </Typography>
+          <div className={classes.grow} />
+          <div className={classes.sectionDesktop}></div>
+          
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
@@ -216,8 +214,9 @@ export default function PrimarySearchAppBar() {
           <CreateItem/>
           <CreateUser/>
 
+
           {/* <Dialog /> */}
-            <IconButton aria-label="show 4 new mails" color="inherit">
+            {/* <IconButton aria-label="show 4 new mails" color="inherit">
               <Badge badgeContent={4} color="secondary">
                 <MailIcon />
               </Badge>
@@ -226,7 +225,7 @@ export default function PrimarySearchAppBar() {
               <Badge badgeContent={17} color="secondary">
                 <NotificationsIcon />
               </Badge>
-            </IconButton>
+            </IconButton> */}
             {/* <IconButton
               edge="end"
               aria-label="account of current user"
